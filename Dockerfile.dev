@@ -1,0 +1,14 @@
+FROM node:alpine
+
+# ENV CI=true
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# this copy command is not strictly necessary for dev,
+# but will be required for production
+COPY . .
+
+CMD [ "npm", "run", "start" ]
