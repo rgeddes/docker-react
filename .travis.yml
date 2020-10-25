@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker image build -t rgeddes/docker-react -f Dockerfile.dev .
+
+script:
+  - docker container run rgeddes/docker-react npm run test -- --coverage
