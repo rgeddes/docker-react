@@ -19,4 +19,4 @@ FROM nginx
 EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
-# the nginx container automatically starts nginx
+# nginx container automatically starts nginx
